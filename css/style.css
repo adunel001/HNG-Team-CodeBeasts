@@ -16,7 +16,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 300;
     line-height: 1.6;
-    
+    background-image: url(../images/the_men_bg.jpg);
 }
 a {
     text-decoration: none;    
@@ -24,13 +24,15 @@ a {
 
 
 /* LOGIN PAGE START */
-
+form{
+    width: 100%;
+    margin: 0px auto;
+}
 .form {
-    background-image: url(../HNG-Team-CodeBeasts/the_men_bg.jpg);
+    /* background-image: url(../images/the_men_bg.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
-
+    height: 100%;
     text-align: center;
     
 }
@@ -71,9 +73,10 @@ a {
     display: flex;
     flex-direction: column;
     margin-top: 10rem;
-    margin-left: 45rem;
+    /* margin-left: 45rem; */
     text-align: center;
-    
+    width: 50%;
+    margin: 0px auto;
 }
 .form__input {
     border: 1.5px solid#ffff00;
@@ -182,13 +185,14 @@ a {
 
 .input-container {
     display: flex;
-  width: 45%;
+  width: 80%;
   margin-top: 4rem;
   margin-bottom: 30px;
   background-color:#f1f1f1;
   border: 2px solid #ffff00;
   border-radius: 20px;
-  
+  margin-right: auto;
+  margin-left: auto;
   padding: 8px;
 }
 .icon {
@@ -225,9 +229,9 @@ a {
     font-size: 1.5rem;
     font-weight: 300;
     cursor: pointer;
-    width: 45%;
+    width: 50%;
     margin-top: 1rem;
-    margin-right: 50rem;
+    /* margin-right: 50rem; */
     opacity: 0.9;
   }
   
@@ -339,4 +343,23 @@ a {
 .homepage__detail {
     font-size: 1.3rem;
     margin-top: 3rem;
+}
+
+.center{
+    text-align: center;
+    margin: 0px auto;
+}
+
+.error{
+    color: brown;
+    font-size: 14px;
+    margin: 10px;
+}
+
+.success{
+    color: white;
+    font-size: 14px;
+    margin: 10px;
+    margin: 0px auto;
+    text-align: center;
 }
