@@ -19,9 +19,11 @@ body {
     
 }
 a {
-    text-decoration: none;
-    
+    text-decoration: none;    
 }
+
+
+/* LOGIN PAGE START */
 
 .form {
     background-image: url(../HNG-Team-CodeBeasts/the_men_bg.jpg);
@@ -43,6 +45,7 @@ a {
     font-weight: 500;
     padding-right: 80rem;
     padding-left: 4rem;
+    color: #fff;
     
 }
 .form__list {
@@ -53,14 +56,17 @@ a {
     padding-right: 2rem;
     
 }
+.form__list-1:hover {
+    color: #ffff00;
+    transform: scaleY(3deg);
+    transition: all .3s;
+}
 .form__list-1 {
     margin-right: 2rem;
     font-size: 1.3rem;
     color: #fff;
 }
-.color {
-    color: #ffff00;
-}
+
 .form__details {
     display: flex;
     flex-direction: column;
@@ -225,6 +231,112 @@ a {
     opacity: 0.9;
   }
   
-  .btn:hover {
+.btn:hover {
     opacity: 1;
-  }
+}
+/* LOGIN PAGE END */
+
+/* REGISTRATION PAGE */
+
+.regpage__content {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 2rem;
+    padding: 4rem 5rem;
+    margin: 5rem auto; 
+    width: 45%;
+    display: block;
+    box-shadow: 0 2rem 4rem rgba(#aaa, .2);
+    position: relative;
+}
+    
+.regpage__group {
+    margin-bottom: 1rem;
+}
+
+.regpage__input{
+    font-size: 1.2rem;
+    font-family: inherit;
+    color:#6D5D4B;
+    padding: 1.3rem;
+    
+    border-radius: 2rem;
+    background-color: rgba(#6D5D4B, 0.2);
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 100%;
+    display: block;
+    transition: all .3s;
+}
+
+
+
+.regpage__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(#6D5D4B, .1);
+    border-bottom: 3px solid #ffff00;
+}
+.regpage__input:focus:invalid {
+    border-bottom: 3px solid #aa2233;
+}
+
+.regpage__input::-webkit-input-placeholder {
+    color: rgba(#6D5D4B, 0.2);
+}
+.regpage__label {
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-left: 2.5rem;
+    text-align: left;
+    display: block;
+    transition: all .2s;    
+}
+
+.regpage__input:placeholder-shown + .regpage__label {/* . // sibling selector  */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+}
+
+
+
+.regpage__button {
+    border: 2px solid#ffff00;
+    border-radius: 20px;
+    color: black;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-family: inherit;
+    font-weight: 300;
+    padding: 1rem 1rem;
+    width: 100%;
+    display: block;
+    transition: all .3s;
+    background-color: #ffff00;
+}
+
+
+.regpage__button:hover, .contact-me:hover {
+    background-color: rgba(255, 255, 255, 0.4); 
+    border: 2px solid #ffff00;
+    color: #ffff00;
+}
+
+/* HOMEPAGE */
+
+.homepage__content {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 2rem;
+    padding: 4rem 5rem;
+    margin: 5rem auto; 
+    width: 45%;
+    display: block;
+    box-shadow: 0 2rem 4rem rgba(#aaa, .2);
+    position: relative;
+}
+
+.homepage__detail {
+    font-size: 1.3rem;
+    margin-top: 3rem;
+}
