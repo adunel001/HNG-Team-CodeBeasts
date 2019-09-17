@@ -48,21 +48,23 @@
 			$password = $_POST["password"];
 			
 			// Form validation (email)
-			if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-				$errors[]="Invalid email";
-			}
+			// if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+			// 	$errors[]="Invalid email";
+			// }
 
 			// Select User from DB if no errors
 			if(count($errors) === 0){
 				try{
-					$query = $DB->prepare("SELECT id, name, email, created_at FROM users WHERE email = ? AND password = ?");
-					$query->execute([$email, $password]);
+					$query = $DB->prepare("SELECT id, name, email, created_at FROM users WHERE email = ? OR name = ? AND password = ?");
+					$query->execute([$email, $email, $password]);
 					if($query->rowCount() > 0){
 						$query = $query->fetch(PDO::FETCH_ASSOC);
 						$success = true;
 						$_SESSION['user'] = $query;
 						redirect_to('index.php');
-					}
+					}else{
+                        $errors[] = "Incorrect login credentials. Please retry or register!";
+                    }
 				}catch(PDOException $e){
 					$errors[] = 'Error saving record <br>'.$e;
 				}

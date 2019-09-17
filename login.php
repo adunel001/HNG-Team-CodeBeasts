@@ -28,7 +28,7 @@
                     if(isset($login)){
                         if(count($login['errors']) > 0){
                             foreach($login['errors'] as $error) 
-                            echo "<p class='error'> {$error}</p>";
+                            echo "<p class='error' style='color: white !important;'> {$error}</p>";
                         }
                     }
                 ?>
